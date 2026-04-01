@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* In v4, we don't need separate imports for base/components anymore */
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Fix for the body transition */
+body {
+  transition-property: color, background-color;
+  transition-duration: 300ms;
+}
